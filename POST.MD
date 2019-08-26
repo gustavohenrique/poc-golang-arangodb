@@ -118,8 +118,8 @@ A massa de dados de teste foi gerada por um script Python. São nove arquivos JS
 E foi criado o script `import_data.sh` para importar os dados. Os comandos abaixo devem ser executados no servidor rodando o ArangoDB:
 
 ```sh
-wget https://json.tar.bz2
-tar jxvf csv.tar.bz2
+curl -sL -o json.tar.bz2 https://gofile.io/?c=2idws9
+tar jxvf json.tar.bz2
 cd json
 bash import_data.sh
 ```
