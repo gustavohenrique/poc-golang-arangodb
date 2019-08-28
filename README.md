@@ -1,12 +1,10 @@
-# Estrutura de dados em Grafo usando ArangoDB com Golang
+# PoC ArangoDB and Golang
 
-### Leia o artigo
+### Post
 
-[Texto sobre a PoC](POST.MD)
+- [pt-BR Português](https://gustavohenrique.net/2019/08/banco-de-dados-em-grafo-com-arangodb-e-golang/)
 
-### Criando dados fake
-
-Altere o script para aumentar a quantidade de objetos gerados.
+### Fake data
 
 ```sh
 virtualenv .venv
@@ -15,7 +13,7 @@ pip install -r requirements.txt
 python generate_fake_data.py
 ```
 
-### Executando ArangoDB via Docker
+### ArangoDB
 
 ```sh
 docker run -d --name arangodb -e ARANGO_ROOT_PASSWORD=root -v $PWD:/data --workdir=/data -p 8529:8529 arangodb
@@ -23,7 +21,7 @@ docker exec -it arangodb sh
 sh> cd json && sh import_data.sh
 ```
 
-### Executando a Webapp
+### Webapp
 
 ```sh
 GOOS=linux go build -o elearning -ldflags="-s -w" main.go
